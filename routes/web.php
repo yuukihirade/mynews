@@ -24,7 +24,7 @@ Route::controller(NewsController::class)->prefix('admin')->group(function() {
 
 use App\Http\Controllers\Admin\AAAController;
 Route::controller(AAAController::class)->prefix('admin')->group(function(){
-    Route::get('/XXX','bbb');
+    Route::get('XXX/XXX','bbb');
 });
 
 use App\Http\Controllers\Admin\ProfileController;

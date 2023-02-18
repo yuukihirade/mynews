@@ -10,6 +10,13 @@ class NewsController extends Controller
     //以下を追記した
     public function add()
     {
+        // dd('addが動いた');
         return view('admin.news.create');
+    }
+    
+    public function create()
+    {
+        // dd('createが動いた');
+        return redirect('admin/news/create');
     }
 }

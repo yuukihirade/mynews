@@ -5,6 +5,9 @@
     <div class="container">
         <div class="row">
             <h2>ニュース一覧</h2>
+            <h2>{{ $hoge }}</h2>
+            <h2> 1 + 1 </h2>
+            <h2>{{ 1 + 1 }}</h2>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -38,7 +41,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $news)
+                            @foreach($huga as $news)
                                 <tr>
                                     <th>{{ $news->id }}</th>
                                     <td>{{ Str::limit($news->title, 100) }}</td>

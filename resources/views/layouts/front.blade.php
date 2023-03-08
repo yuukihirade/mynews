@@ -19,7 +19,7 @@
         
         <!-- Styles -->
         <link href="{{ secure_asset('css/app.css' )}}" rel="stylesheet">
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="app">
@@ -74,7 +74,6 @@
             <!-- ここまでナビゲーションバー -->
             
             <main class="py-4">
-                <h1>ははは</h1>
                 @yield('content')
             </main>
         </div>

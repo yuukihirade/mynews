@@ -59,7 +59,7 @@ class NewsController extends Controller
             // それ以外は全てのニュースを取得する
             $posts = News::all();
         }
-        return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('admin.news.index', ['huga' => $posts, 'cond_title' => $cond_title, 'hoge' => 'hello']);
     }
     
     public function edit(Request $request)

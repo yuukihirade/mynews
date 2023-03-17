@@ -27,20 +27,32 @@ class ProfileController extends Controller
     //
     public function add()
     {
+        // $profile = new Profile;
+
+        // $profile->name = "麻生太郎";
+        // $profile->gender = "男";
+        // $profile->hobby = "ゴルフ";
+        // $profile->introduction = "よろしく";
+        
+        // $profile->save();
         //dd("addが動いた");
         return view('admin.profile.create');
     }
     
     public function create(Request $request)
     {
-        $this->validate($request, Profile::$rules);
+        // $this->validate($request, Profile::$rules);
         
         $profile = new Profile;
-        $form = $request->all();
+        // $form = $request->all();
         
-        unset($form['_token']);
+        // unset($form['_token']);
         
-        $profile->fill($form);
+        // $profile->fill($form);
+        $profile->name = $request->hoge;
+        $profile->gender = $request->gender;
+        $profile->hobby = $request->hobby;
+        $profile->introduction = $request->introduction;
         $profile->save();
         //dd("createが動いた");
         return redirect('admin/profile');

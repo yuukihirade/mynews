@@ -74,7 +74,7 @@
             <!-- ここまでナビゲーションバー -->
             
             <main class="py-4">
-                <h1>ははは</h1>
+
                 @yield('content')
             </main>
         </div>

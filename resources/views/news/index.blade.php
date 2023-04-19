@@ -45,6 +45,12 @@
                                 <div class="body mt-3">
                                     {{ Str::limit($post->body, 1500) }}
                                 </div>
+                                <div>
+                                    <a href="{{ route('news.comment.add', ['id' => $post->id])}}">コメントする</a>
+                                </div>
+                                <div>
+                                    <a href="{{ route('news.comment.show',['id' => $post->id]) }}">コメント一覧</a>
+                                </div>
                             </div>
                             <div class="image col-md-6 text-right mt-4">
                                 @if ($post->image_path)

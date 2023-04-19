@@ -61,6 +61,13 @@ Route::get('/profile', [PublicProfileController::class, 'index'])->name('profile
 use App\Http\Controllers\TweetController as PublicTweetController;
 Route::get('/tweet', [PublicTweetController::class, 'index'])->name('tweet.index');
 
+use App\Http\Controllers\CommentController as PublicCommentController;
+Route::controller(PublicCommentController::class)->name('news.')->group(function(){
+    Route::get('/comment_create', 'add')->name('comment.add');
+    Route::post('/comment_create', 'create')->name('comment.create');
+    Route::get('/comment_show', 'show')->name('comment.show');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

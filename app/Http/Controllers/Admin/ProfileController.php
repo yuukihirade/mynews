@@ -53,6 +53,8 @@ class ProfileController extends Controller
         $profile->gender = $request->gender;
         $profile->hobby = $request->hobby;
         $profile->introduction = $request->introduction;
+        $hogehoge = "hello";
+        dd($hogehoge, $request->all());
         $profile->save();
         //dd("createが動いた");
         return redirect('admin/profile');
